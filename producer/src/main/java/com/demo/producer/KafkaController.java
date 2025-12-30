@@ -19,8 +19,8 @@ public class KafkaController {
 
     @PostMapping("/send")
     public String sendMessage(@RequestParam String message) {
-        RiderLocation location = new RiderLocation("rider456", 28.61, 77.23);
-        kafkaTemplate.send("my-topic-class", location);
+        RiderLocation location = new RiderLocation("rider101112", 61.28, 23.77);
+        kafkaTemplate.send("my-topic-rider", location);
         return "Message sent: " + location.getRiderId();
     }
 
